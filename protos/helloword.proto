@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package helloworld;
+
+message Request {}
+
+message Response {
+  string data = 1;
+}
+
+service HelloWordService {
+  // query hello world data
+  rpc QueryHelloWorld (Request) returns (Response);
+}
