@@ -1,0 +1,21 @@
+{
+  "name": "node-graphql-server",
+  "version": "1.0.0",
+  "description": "a sample for independent graphql server",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JustinWang",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^2.6.9",
+    "express": "^4.17.1",
+    "graphql": "^14.4.2"
+  },
+  "devDependencies": {
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
