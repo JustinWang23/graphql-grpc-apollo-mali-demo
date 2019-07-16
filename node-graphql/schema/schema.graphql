@@ -1,3 +1,19 @@
+type Books {
+  title: String
+  author: Author
+  price: Float
+  categories: [String]
+}
+
+type Author {
+  name: String
+  age: Int
+}
+
 type Query {
-  hello: String
+  listBooks(title: String): [Books]
+}
+
+schema {
+  query: Query
 }
