@@ -5,7 +5,7 @@ import * as fs from 'fs'
 
 import { resolvers } from './resolvers'
 
-const schemaPublic = fs.readFileSync(path.resolve(__dirname, './schema/schema.graphql')).toString('utf8');
+const schemaPublic = fs.readFileSync(path.resolve(__dirname, './schema/schema.graphql')).toString('utf8')
 
 const schema = makeExecutableSchema({
   resolvers,
@@ -16,7 +16,7 @@ const server = new ApolloServer({ schema })
 
 const app = express()
 
-server.applyMiddleware({app})
+server.applyMiddleware({ app })
 
 app.listen({ port: 4000 }, () =>
   console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
