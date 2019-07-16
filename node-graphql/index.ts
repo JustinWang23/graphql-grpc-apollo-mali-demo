@@ -1,22 +1,18 @@
-import { ApolloServer, gql } from 'apollo-server-express'
+import { ApolloServer, makeExecutableSchema } from 'apollo-server-express'
 import express from 'express'
+import * as path from 'path'
+import * as fs from 'fs'
 
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`
+import { resolvers } from './resolvers'
 
-const resolvers = {
-  Query: {
-    hello: () => 'world'
-  }
-}
+const schemaPublic = fs.readFileSync(path.resolve(__dirname, './schema/schema.graphql')).toString('utf8');
 
-const server = new ApolloServer({
-  typeDefs,
+const schema = makeExecutableSchema({
   resolvers,
+  typeDefs: [schemaPublic]
 })
+
+const server = new ApolloServer({ schema })
 
 const app = express()
 
