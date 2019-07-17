@@ -9,6 +9,7 @@
   },
   "author": "JustinWang",
   "license": "MIT",
+  "private": true,
   "dependencies": {
     "apollo-server-express": "^2.6.9",
     "express": "^4.17.1",
