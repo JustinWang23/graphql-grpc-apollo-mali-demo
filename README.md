@@ -1,11 +1,24 @@
 # GraphQL + gRPC
 
-## Start
+This is a sample project using [GraphQL](https://graphql.org/) as an isolate API service and using [Mali](https://mali.js.org/) as a [gRPC](https://grpc.io/) backend microservices.
+
+## Installation
 
 ```
-cd node-graphql && yarn
+git clone git@github.com:JustinWang23/graphql-grpc-apollo-mali-api.git
 
-yarn start
+cd node-graphql
+
+yarn  // or if you are using npm: npm install
 ```
 
-Then you can visit the GraphQL playground via `http://localhost:4000/graphql`
+## Usage
+
+```
+// cd node-graphql
+
+yarn start  // or if you are using npm: npm run start
+
+```
+
+Then you will see the GraphQL playground running `🚀 Server ready at http://localhost:4000/graphql`
