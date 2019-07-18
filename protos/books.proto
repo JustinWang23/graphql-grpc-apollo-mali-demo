@@ -4,12 +4,16 @@ package book;
 
 message EmptyRequest {}
 
-message BookResponse {
+message Books {
   int32 id = 1;
   string title = 2;
   float price = 3;
   repeated string categories = 4;
   int32 authorId = 5;
+}
+
+message BookResponse {
+  repeated Books books = 1;
 }
 
 message AuthorResponse {
