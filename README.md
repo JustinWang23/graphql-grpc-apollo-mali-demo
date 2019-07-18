@@ -18,7 +18,6 @@ yarn  // or if you are using npm: npm install
 // cd node-graphql
 
 yarn start  // or if you are using npm: npm run start
-
 ```
 
 Then you will see the GraphQL playground running `🚀 Server ready at http://localhost:4000/graphql`
