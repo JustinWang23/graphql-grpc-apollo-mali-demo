@@ -30,9 +30,17 @@ interface Params {
   title: string
 }
 
+interface Book {
+  id: number
+  title: string
+  price: number
+  categories: string[]
+  authorId: number
+}
+
 export default (root: any, params: Params) => {
   if(params.title) {
-    return Books.filter((book) => book.title.includes(params.title))
+    return Books.filter((book: Book) => book.title.includes(params.title))
   }
   return Books
 }
