@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package book;
+
+message EmptyRequest {}
+
+message BookResponse {
+  int32 id = 1;
+  string title = 2;
+  float price = 3;
+  repeated string categories = 4;
+  int32 authorId = 5;
+}
+
+message AuthorResponse {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+service BooksService {
+  // get all books
+  rpc getBooks (EmptyRequest) returns (BookResponse);
+
+  // get all authors
+  rpc getAuthors (EmptyRequest) returns (AuthorResponse);
+}
