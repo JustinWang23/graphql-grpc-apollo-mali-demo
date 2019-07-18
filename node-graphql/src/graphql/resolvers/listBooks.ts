@@ -1,24 +1,29 @@
 const Books = [{
+  id: 1,
   title: 'Talent',
-  author: {
-    name: 'Justin',
-    age: 26,
-  },
   price: 37.8,
   categories: [
     'Education',
     'Popular',
-  ]
+  ],
+  authorId: 1,
 }, {
+  id: 2,
   title: 'GraphQL',
-  author: {
-    name: 'Somebody',
-    age: 43,
-  },
   price: 102.5,
   categories: [
     'Skills',
-  ]
+  ],
+  authorId: 2,
+}, {
+  id: 3,
+  title: 'Talent is not enough',
+  price: 146.2,
+  categories: [
+    'Skills',
+    'Popular',
+  ],
+  authorId: 1,
 }]
 
 interface Params {
@@ -27,7 +32,7 @@ interface Params {
 
 export default (root: any, params: Params) => {
   if(params.title) {
-    return Books.filter((book) => book.title === params.title)
+    return Books.filter((book) => book.title.includes(params.title))
   }
   return Books
 }

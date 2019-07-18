@@ -1,4 +1,5 @@
 type Books {
+  id: Int
   title: String
   author: Author
   price: Float
@@ -6,6 +7,7 @@ type Books {
 }
 
 type Author {
+  id: Int
   name: String
   age: Int
 }
