@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "a sample for grpc server using mali",
   "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "JustinWang",
   "license": "MIT",
   "private": true,
