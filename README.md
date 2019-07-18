@@ -1,6 +1,6 @@
 # GraphQL + gRPC
 
-This is a sample project using [Apollo](https://www.apollographql.com/docs/apollo-server/) as an isolate [GraphQL](https://graphql.org/) service and using [Mali](https://mali.js.org/) as a [gRPC](https://grpc.io/) backend microservices.
+This is a sample project using [Apollo](https://www.apollographql.com/docs/apollo-server/) as an isolate [GraphQL](https://graphql.org/) server and using [Mali](https://mali.js.org/) as a [gRPC](https://grpc.io/) backend microservice server.
 
 ## Installation
 
