@@ -1,8 +1,8 @@
 import Mali from 'mali'
 import path from 'path'
 
-import getBooks from './getBooks'
-import getAuthors from './getAuthors'
+import getBooks from './services/getBooks'
+import getAuthors from './services/getAuthors'
 
 const PROTO_PATH = path.resolve(__dirname, '../../', 'protos/books.proto')
 

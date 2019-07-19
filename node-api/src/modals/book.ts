@@ -1,4 +1,4 @@
-const Books = [{
+export default [{
   id: 1,
   title: 'Talent',
   price: 37.8,
@@ -25,7 +25,3 @@ const Books = [{
   ],
   authorId: 1,
 }]
-
-export default async (ctx: any) => {
-  ctx.res = { books: Books }
-}
