@@ -11,11 +11,15 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@grpc/proto-loader": "^0.5.1",
     "apollo-server-express": "^2.6.9",
     "express": "^4.17.1",
-    "graphql": "^14.4.2"
+    "graphql": "^14.4.2",
+    "grpc": "^1.22.2",
+    "grpc-promise": "^1.4.0"
   },
   "devDependencies": {
+    "grpc_tools_node_protoc_ts": "^2.5.4",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   }
