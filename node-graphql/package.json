@@ -19,7 +19,6 @@
     "grpc-promise": "^1.4.0"
   },
   "devDependencies": {
-    "grpc_tools_node_protoc_ts": "^2.5.4",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   }
