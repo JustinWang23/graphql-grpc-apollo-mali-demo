@@ -22,7 +22,7 @@ message AuthorResponse {
   int32 age = 3;
 }
 
-service BooksService {
+service BookService {
   // get all books
   rpc getBooks (EmptyRequest) returns (BookResponse);
 
