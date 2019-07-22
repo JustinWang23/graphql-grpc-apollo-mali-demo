@@ -5,7 +5,7 @@ interface Params {
 }
 
 interface Book {
-  id: number 
+  id: number
   title: string
   price: number
   categories: string[]
