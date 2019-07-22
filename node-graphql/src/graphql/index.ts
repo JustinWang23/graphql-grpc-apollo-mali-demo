@@ -4,7 +4,7 @@ import * as fs from 'fs'
 
 import resolvers from './resolvers'
 
-const schemaPublic = fs.readFileSync(path.resolve(__dirname, './schema/schema.graphql')).toString('utf8')
+const schemaPublic = fs.readFileSync(path.resolve(__dirname, './schema/book.graphql')).toString('utf8')
 
 export const schema = makeExecutableSchema({
   resolvers,
