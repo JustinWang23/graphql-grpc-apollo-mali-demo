@@ -4,14 +4,17 @@ import path from 'path'
 import getBooks from './services/getBooks'
 import getAuthors from './services/getAuthors'
 
+import { logger } from './middlewares'
+
 const PROTO_PATH = path.resolve(__dirname, '../../', 'protos/books.proto')
 
 const main = () => {
-  const server = new Mali(PROTO_PATH)
+  const app = new Mali(PROTO_PATH)
 
-  server.use({ getBooks, getAuthors })
+  app.use(logger)
+  app.use({ getBooks, getAuthors })
 
-  server.start('0.0.0.0:50051')
+  app.start('0.0.0.0:50051')
 }
 
 main()
