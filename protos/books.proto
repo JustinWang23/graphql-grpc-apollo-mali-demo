@@ -16,10 +16,14 @@ message BookResponse {
   repeated Books books = 1;
 }
 
-message AuthorResponse {
+message Authors {
   int32 id = 1;
   string name = 2;
   int32 age = 3;
+}
+
+message AuthorResponse {
+  repeated Authors authors = 1;
 }
 
 service BookService {
