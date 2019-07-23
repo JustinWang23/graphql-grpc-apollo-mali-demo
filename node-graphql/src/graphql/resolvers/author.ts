@@ -1,4 +1,4 @@
-import { GrpcClient } from '../../grpc'
+import { listBooksClient } from '../services'
 
 interface Author {
   id: number
@@ -7,7 +7,6 @@ interface Author {
 }
 
 export default async (root: any, params: any) => {
-  const client: any = new GrpcClient('0.0.0.0:50051', 'book', 'books.proto').getService('BookService')
-  const result = await client.getAuthors().sendMessage()
+  const result = await listBooksClient.getAuthors().sendMessage()
   return result.authors.find((author: Author) => author.id === root.authorId)
 }
