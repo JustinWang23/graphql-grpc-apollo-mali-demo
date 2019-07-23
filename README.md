@@ -9,15 +9,28 @@ git clone git@github.com:JustinWang23/graphql-grpc-apollo-mali-api.git
 
 cd node-graphql
 
-yarn  // or if you are using npm: npm install
+# or if you are using npm: npm install
+yarn  
 ```
 
 ## Usage
 
-```
-// cd node-graphql
+start graphql server
 
-yarn start  // or if you are using npm: npm run start
+```
+# cd node-graphql
+
+yarn start
 ```
 
 Then you will see the GraphQL playground running `🚀 Server ready at http://localhost:4000/graphql`
+
+start microservices server
+
+```
+# cd node-api
+
+yarn start
+```
+
+Now you can connect to the microservices at `localhost:50051` via gRPC
