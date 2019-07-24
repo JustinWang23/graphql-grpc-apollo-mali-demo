@@ -34,3 +34,85 @@ yarn start
 ```
 
 Now you can connect to the microservices at `localhost:50051` via gRPC
+
+## Example
+
+First, we define a schema for GraphQL
+
+```
+type Books {
+  id: Int
+  title: String
+  author: Author
+  price: Float
+  categories: [String]
+}
+
+type Author {
+  id: Int
+  name: String
+  age: Int
+}
+
+type Query {
+  listBooks(title: String): [Books]
+}
+
+schema {
+  query: Query
+}
+```
+
+Then, you can make queries for what data you want to fetch
+
+```
+query {
+  listBooks {
+    title
+    categories
+    author {
+      name
+    }
+  }
+}
+```
+
+Afterwards, you can get the result based on your queries
+
+```
+{
+  "data": {
+    "listBooks": [
+      {
+        "title": "Talent",
+        "categories": [
+          "Education",
+          "Popular"
+        ],
+        "author": {
+          "name": "Justin"
+        }
+      },
+      {
+        "title": "GraphQL",
+        "categories": [
+          "Skills"
+        ],
+        "author": {
+          "name": "Somebody"
+        }
+      },
+      {
+        "title": "Talent is not enough",
+        "categories": [
+          "Skills",
+          "Popular"
+        ],
+        "author": {
+          "name": "Justin"
+        }
+      }
+    ]
+  }
+}
+```
