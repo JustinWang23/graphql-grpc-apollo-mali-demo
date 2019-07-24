@@ -33,11 +33,11 @@ start microservices server
 yarn start
 ```
 
-Now you can connect to the microservices at `localhost:50051` via gRPC
+Now you can connect to the microservices at `localhost:50051` via gRPC.
 
 ## Example
 
-First, we define a schema for GraphQL
+First, we define a schema for GraphQL.
 
 ```
 type Books {
@@ -63,7 +63,7 @@ schema {
 }
 ```
 
-Then, you can make queries for what data you want to fetch
+Then, you can make queries for what data you want to fetch.
 
 ```
 query {
@@ -77,7 +77,7 @@ query {
 }
 ```
 
-Afterwards, you can get the result based on your queries
+Afterwards, you can get the result based on your queries.
 
 ```
 {
@@ -116,3 +116,7 @@ Afterwards, you can get the result based on your queries
   }
 }
 ```
+
+## License
+
+GraphQL-gRPC-Apollo-Mali-Api is  licensed under the [MIT License](./LICENSE).
